@@ -13,52 +13,35 @@ body {
     color: rgb(115, 0, 255);
     font-size: calc(min(2vh, 1vw) + 0.5rem);
 }
-
 .top_nav_bar {
-    width: 100%;
+    display: grid;
     position: sticky;
-    font-size: calc(min(4vh, 2vw) + 1rem);
-    background: rgb(115, 0, 255);
-    color: black;
-    overflow: hidden;
-    vertical-align: baseline;
-    z-index: 1;
-}
-
-.top_nav_bar_title {
-    background-color: inherit;
-    width: max-content;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
-    float: left;
+    top: 0;
+    z-index: 2;
 }
 
 .top_nav_bar_buttons {
-    float: right;
-    display: flex;
-    align-items: left;
-    flex-direction: row;
-    width: max-content;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding-left: 4%;
-    padding-right: 4%;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    font-size: calc(min(4vh, 2vw) + 1rem);
+    background: rgb(115, 0, 255);
+    color: black;
+    vertical-align: baseline;
 }
 
 .top_nav_bar_button_entry {
-    background-color: inherit;
-    text-align: center;
+    background-color: rgba(255, 255, 255, 0.125);
     width: max-content;
-    align-self: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding: 2%;
-    border-radius: 1vw;
+    padding: 0.5%;
+    margin: 0.1%;
     transition-duration: 250ms;
+    float:right;
+}
+
+.top_nav_bar_button_entry:first-child {
+    float: left;
 }
 
 .top_nav_bar_button_entry:hover {
@@ -84,16 +67,6 @@ body {
     justify-content: right;
 }
 
-.content_bg {
-    height: 100%;
-}
-
-.content_highlight_reel {
-    width: 100%;
-    height: max-content;
-    z-index: 0;
-}
-
 .content_fg {
     display: grid;
     z-index: 1;
@@ -101,10 +74,12 @@ body {
 
 .content_overlay_background {
     background-color: rgba(62, 0, 127, 0.5);
-    width: 100%;
-    margin: 5vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
+    width: 100% - 4vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    margin-left: 5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
     padding-top: 6vh;
     padding-bottom: 6vh;
     overflow: hidden;

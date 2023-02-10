@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Flan's Web Sandbox</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
@@ -11,17 +12,12 @@
 
     <body>
         <div class="top_nav_bar">
-            <div class="top_nav_bar_title">
-                Lily Haverlag
-            </div>
-            <div class="top_nav_bar_buttons">
-                <div id="default_page" class="top_nav_bar_button_entry">
-                    <a href="#" onclick='load_content(this, "parts/home.html")'>Home</a>
-                </div>
-                <div class="top_nav_bar_button_entry">
-                    <a href="#" onclick='load_content(this, "projects/index.html")'>Projects</a>
-                </div>
-            </div>
+            <nav class="top_nav_bar_buttons">
+                <a class="top_nav_bar_button_entry" href="#" onclick='load_content(this, "parts/about.html")'>Lily Haverlag</a>
+                <a class="top_nav_bar_button_entry" href="#" onclick='load_content(this, "parts/socials.html")'>Socials</a>
+                <a class="top_nav_bar_button_entry" href="#" onclick='load_content(this, "projects/index.html")'>Projects</a>
+                <a class="top_nav_bar_button_entry" href="#" onclick='load_content(this, "parts/home.html")'>Home</a>
+            </nav>
         </div>
         <div id="content"></div>
     </body>
