@@ -9,8 +9,8 @@ body {
 	padding: 0;
 	outline: 0;
 	font-family: Connection;
-	background-color: black;
-	color: rgb(115, 0, 255);
+	background-color: #1D1D1D;
+	color: #EFEFEF;
 	font-size: calc(min(2vh, 1vw) + 0.5rem);
 }
 
@@ -27,13 +27,13 @@ body {
 	position: sticky;
 	top: 0;
 	font-size: calc(min(4vh, 2vw) + 1rem);
-	background: rgb(115, 0, 255);
+	background-color: #8515d4;
 	color: black;
 	vertical-align: baseline;
 }
 
 .top_nav_bar_button_entry {
-	background-color: rgba(255, 255, 255, 0.125);
+	background-color: rgba(255, 255, 255, 0.1);
 	width: max-content;
 	padding: 0.5%;
 	margin: 0.1%;
@@ -46,19 +46,18 @@ body {
 }
 
 .top_nav_bar_button_entry:hover {
-	color: rgb(255, 255, 255);
-	background-color: rgba(255, 255, 255, 0.5);
+	color: black;
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .top_nav_bar_button_entry:focus {
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .content {
 	display: grid;
 	position: relative;
-	background: black;
-	color: rgb(115, 0, 255);
+	color: #BDBDBD;
 }
 
 .content div {
@@ -89,7 +88,7 @@ body {
 }
 
 .content_overlay_background {
-	background-color: rgba(62, 0, 127, 0.5);
+	background-color: rgba(34, 34, 34, 0.8);
 	width: 100% - 4vw;
 	margin-top: 5vw;
 	margin-bottom: 5vw;
@@ -105,14 +104,14 @@ body {
 .content_fg p {
 	margin-top: 5%;
 	margin-bottom: 5%;
-	color: white;
+	color: rgba(239, 239, 239, 1.0);
 	width: 100%;
 }
 
 .content_fg h1 {
 	margin-top: 5%;
 	margin-bottom: 5%;
-	color: white;
+	color: rgba(239, 239, 239, 1.0);
 }
 
 a {
@@ -130,18 +129,19 @@ a {
 
 .content_button {
 	border-radius: 1vw;
-	background-color: rgb(6, 214, 214);
+	background-color: #00ADB5;
 	padding: 0.5vw;
 	padding-bottom: 0.55vw;
 	transition-duration: 250ms;
 }
 
 .content_button:focus {
-	background-color: grey !important;
+	background-color: rgba(47, 47, 47, 1.0) !important;
 }
 
 .content_button:hover {
-	background-color: white;
+	background-color: rgba(239, 239, 239, 1.0);
+	color: #00ADB5;
 	padding: 1vw;
 }
 
@@ -152,11 +152,11 @@ a {
 }
 
 .content_title_link:hover {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .content_title_link:focus {
-	background-color: rgba(64, 64, 64, 0.8) !important;
+	background-color: rgba(34, 34, 34, 0.8) !important;
 }
 
 .content_grid {
@@ -214,25 +214,28 @@ a {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.0);
+	object-fit: cover;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #EFEFEF;
 	background-blend-mode: multiply;
-	color: rgba(255, 255, 255, 0.0);
 	margin-left: 1%;
 	margin-right: 1%;
 	margin-top: 1%;
 	margin-bottom: 1%;
-	padding: 1%;
+	padding: 0%;
 	border-radius: 1vw;
 	transition-duration: 250ms;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	font-size: calc(max(0.75vw, 0.75vh) + 1rem);
+	overflow: hidden;
 }
 
 .image_grid_entry img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	overflow: hidden;
 }
 
 .content_grid_entry {
@@ -240,9 +243,9 @@ a {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.0);
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #EFEFEF;
 	background-blend-mode: multiply;
-	color: rgba(255, 255, 255, 0.0);
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 5%;
@@ -264,14 +267,14 @@ a {
 
 @media screen and (orientation:landscape) {
 	.content_grid_entry {
-		color: rgba(255, 255, 255, 0.0);
+		color: rgba(239, 239, 239, 0.0);
 		font-size: 1.5vw;
 	}
 }
 
 .content_grid_entry:hover {
 	transform: scale(1.1);
-	color: rgba(255, 255, 255, 1.0);
+	color: rgba(239, 239, 239, 1.0);
 	background-color: rgba(127, 127, 127, 1.0);
 	border-top: 3x solid #bbb;
 }
@@ -279,4 +282,10 @@ a {
 .content_title {
 	text-align: center;
 	font-size: calc(max(1.5vw, 1.5vh) + 2rem);
+}
+
+.inline_image {
+	width: 3vw;
+	padding: 1%;
+	vertical-align: middle;
 }
