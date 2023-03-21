@@ -75,6 +75,13 @@ body {
 	padding-right: 6vw;
 }
 
+.content h2 {
+	margin-right: 9vw;
+	margin-left: 7vw;
+	padding-left: 6vw;
+	padding-right: 6vw;
+}
+
 .content ul {
 	margin-right: 9vw;
 	margin-left: 9vw;
@@ -288,4 +295,36 @@ a {
 	width: 3vw;
 	padding: 1%;
 	vertical-align: middle;
+}
+
+.content_borderless_grid {
+	display: grid;
+	grid-template-columns: 36vw 36vw;
+	grid-auto-rows: 24vw;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	justify-content: center;
+	font-size: calc(max(0.75vw, 0.75vh) + 1rem);
+}
+
+.content_borderless_grid_entry img {
+	width: 64px;
+	margin-top: -0.5vw;
+	margin-bottom: -0.5vw;
+}
+
+@media screen and (orientation:portrait) {
+	.content_borderless_grid {
+		grid-template-columns: 80vw;
+		grid-auto-rows: 53.333vw;
+	}
+}
+
+@media screen and (orientation:landscape) {
+	.content_borderless_grid {
+		grid-template-columns: 36vw 36vw;
+		grid-auto-rows: 24vw;
+	}
 }
