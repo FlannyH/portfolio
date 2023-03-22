@@ -393,7 +393,7 @@ a:hover {
 .content_borderless_grid_entry img {
 	width: 2em;
 	margin-top: -1.2em;
-	margin-top: -1.2em;
+	margin-bottom: -1.2em;
 }
 
 @media screen and (orientation:portrait) {
