@@ -200,8 +200,12 @@ a {
 	margin: 0;
 }
 
+a {
+	transition-duration: 250ms;
+}
+
 a:hover {
-	background-color: grey;
+	background-color: rgb(231, 151, 255);
 }
 
 .external_content_page {
