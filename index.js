@@ -28,6 +28,9 @@ var prev_e = 0;*/
 $(document).ready(function () {
 	// Get the page from the link `?page=/path/to/path.html`
 	const url_params = new URLSearchParams(window.location.search);
-	const page_source = url_params.get("page");
+	page_source = url_params.get("page");
+	if (page_source == null) {
+		page_source = "/parts/home.html";
+	}
 	$("#content").load(page_source);
 });
