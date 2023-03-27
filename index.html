@@ -3,38 +3,40 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Flan's Web Sandbox</title>
-	<link rel="stylesheet" href="styles.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="/style/sidebar.css" />
+	<link rel="stylesheet" href="/style/content.css" />
+	<title>Lily - Portfolio</title>
 </head>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="index.js"></script>
 
 <body>
-	<div class="top_nav_bar">
-		<p>Lily Haverlag</p>
-		<hr />
-		<a class="top_nav_bar_button_entry" href="?page=/parts/home.html">Home</a><br>
-		<a class="top_nav_bar_button_entry" href="?page=/projects/team.html">Team Projects</a><br>
-		<a class="top_nav_bar_button_entry" href="?page=/projects/solo.html">Solo Projects</a><br>
-
-		<div class="nav_bar_socials_container">
-			<!--SOCIALS-->
+	<div class="nav_bar">
+		<div class="top_nav_bar">
+			<p>Lily Haverlag</p>
+			<hr />
+			<ul>
+				<li><a href="?page=/parts/home.html">Home</a></li>
+				<li><a href="?page=/projects/team.html">Team Projects</a></li>
+				<li><a href="?page=/projects/solo.html">Solo Projects</a></li>
+			</ul>
+		</div>
+		<div class="bottom_nav_bar">
 			<p>Socials</p>
 			<hr />
-			<div class="nav_bar_socials">
-				<p>
-					<a href="https://github.com/FlannyH"> <img src="/assets/logo_github.svg" class="inline_image">GitHub: FlannyH</a>
-					<a href="https://twitter.com/AdrenaLily"> <img src="/assets/logo_twitter.svg" class="inline_image">Twitter: @AdrenaLily</a>
-					<a href="https://www.linkedin.com/in/lilyhaverlag/"> <img src="/assets/logo_linkedin.svg" class="inline_image">LinkedIn: lilyhaverlag</a>
-					<a href="https://discord.com/users/278598741559083010/"> <img src="/assets/logo_discord.svg" class="inline_image">Discord: Flan#6660</a>
-				</p>
-			</div>
+			<ul>
+				<li><a href="https://github.com/FlannyH"> <img src="/assets/logo_github.svg" class="inline_image">GitHub: FlannyH</a></li>
+				<li><a href="https://twitter.com/AdrenaLily"> <img src="/assets/logo_twitter.svg" class="inline_image">Twitter: @AdrenaLily</a></li>
+				<li><a href="https://www.linkedin.com/in/lilyhaverlag/"> <img src="/assets/logo_linkedin.svg" class="inline_image">LinkedIn: lilyhaverlag</a></li>
+				<li><a href="https://discord.com/users/278598741559083010/"> <img src="/assets/logo_discord.svg" class="inline_image">Discord: Flan#6660</a></li>
+			</ul>
 		</div>
 	</div>
 	<div id="content" class="besides_nav_bar">
 	</div>
+	<br/>
+	<br/>
 </body>
-
 </html>
