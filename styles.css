@@ -69,7 +69,6 @@ body {
 }
 
 .top_nav_bar_button_entry:hover {
-	color: black;
 	background-color: rgb(231, 151, 255);
 }
 
@@ -167,6 +166,7 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
+	transition-duration: 250ms;
 }
 
 .content_socials a {
@@ -178,7 +178,7 @@ a {
 	align-items: center;
 	transition-duration: 100ms;
 	margin-top: -1.2em;
-	margin-top: -1.2em;
+	margin-bottom: -1.2em;
 }
 
 .nav_bar_socials_container {
@@ -200,10 +200,6 @@ a {
 	padding-bottom: 3%;
 	margin-top: 2px;
 	margin-bottom: 2px;
-}
-
-a {
-	transition-duration: 250ms;
 }
 
 a:hover {
@@ -366,7 +362,6 @@ a:hover {
 	transform: scale(1.1);
 	color: rgba(239, 239, 239, 1.0);
 	background-color: rgba(127, 127, 127, 1.0);
-	border-top: 3x solid #bbb;
 }
 
 .content_title {
