@@ -298,6 +298,10 @@ a:hover {
 		grid-template-columns: 40vw 40vw;
 		grid-auto-rows: 22.5vw;
 	}
+	.image_single {
+		grid-template-columns: 85.33vw;
+		grid-auto-rows: 45vw;
+	}
 }
 
 @media screen and (orientation:landscape) {
