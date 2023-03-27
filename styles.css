@@ -54,7 +54,7 @@ body {
 
 .top_nav_bar a {
 	top: 0;
-	font-size: 1em;
+	font-size: 0.8em;
 	text-indent: 5%;
 	background-color: #6c48ff;
 	color: lightgrey;
@@ -274,6 +274,17 @@ a:hover {
 .image_grid {
 	display: grid;
 	grid-template-columns: 36vw 36vw;
+	grid-auto-rows: 24vw;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	justify-content: center;
+}
+
+.image_single {
+	display: grid;
+	grid-template-columns: 42.66vw;
 	grid-auto-rows: 24vw;
 	margin-left: 2%;
 	margin-right: 2%;

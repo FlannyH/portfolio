@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Flan's Web Sandbox</title>
+	<link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+	<!--TITLE-->
+	<div class="content_title">
+		<p>Flan Game Boy Emulator</p>
+		<hr />
+	</div>
+	<div class="content_title">
+		<p>Description</p>
+	</div>
+	<!--SUMMARY-->
+	<div class="content">
+		<p>
+			For my personal development, I built a Game Boy emulator using the Rust programming language.
+			As my first adventure into the world of the Rust programming language, I quickly became familiar with the unique features of the Rust language, like the ownership model.
+		</p>
+		<p>
+			The emulator can emulate ROMs of games like Pokemon and Super Mario Land, fully playable at full speed, with stereo audio, a custom bootrom (with the option to provide the official bootrom).
+			It's strictly a Game Boy emulator, and does not support Game Boy Color features.
+		</p>
+		<p>
+			The code has a flag for a debug mode, which will visualize useful information, like the current state of video memory (on the left), currently loaded ROM banks (in the middle), and palettes (below the ROM banks).
+		</p>
+	</div>
+	<!--NEAT IMAGES-->
+	<div class="image_single">
+		<div class="image_grid_entry">
+			<video controls autoplay loop muted width="100%" poster="/assets/gb_emulator/debug_layer_sml.png">
+				<source src="/assets/gb_emulator/debug_layer_sml.webm" type="video/webm" />
+				<img src="/assets/gb_emulator/debug_layer_sml.png" />
+			</video>
+		</div>
+	</div>
+	<!--LINKS-->
+	<div class="content_title">
+		<hr />
+		<p>Links</p>
+	</div>
+	<div class="content">
+		<div class="content_socials">
+			<p>
+				<br /><a href="https://github.com/FlannyH/GameBoyEmulator"> <img src="/assets/logo_github.svg" class="inline_image">View on GitHub</a>
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>
