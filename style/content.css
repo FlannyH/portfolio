@@ -113,7 +113,6 @@ body {
 	justify-content: center;
 	text-align: center;
 	object-fit: cover;
-	background-color: rgba(255, 255, 255, 0.1);
 	color: #EFEFEF;
 	background-blend-mode: multiply;
 	margin-left: 1%;
@@ -127,6 +126,7 @@ body {
 	background-repeat: no-repeat;
 	font-size: calc(max(0.75vw, 0.75vh) + 1rem);
 	overflow: hidden;
+	background-color: black
 }
 
 .image_grid_entry img {
@@ -153,6 +153,7 @@ body {
 	transition-duration: 250ms;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+    text-decoration: none;
 }
 
 

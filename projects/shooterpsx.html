@@ -1,0 +1,55 @@
+<!--TITLE-->
+<div class="content_title">
+	<p>First Person Shooter on PS1</p>
+	<hr />
+</div>
+<div class="content_title">
+	<p>Description</p>
+</div>
+<!--SUMMARY-->
+<div class="content">
+	<p>
+		I have always dreamed of creating a game for the Playstation 1, the first game console I ever played as a child.
+		So, I decided to learn how the console works, and make my own game for it.
+	</p>
+	<p>
+		To compile the project into a disc image the Playstation 1 can play, I used PSn00bSDK, an open source SDK for developing homebrew applications and games for the PS1. It uses uses CMake to build the project, which gave me a great opportunity to learn how to use CMake properly.
+	</p>
+	<p>
+		This project is currently in development, so here is where the project is at right now:
+		<ul>
+			<li>🖥️Cross-platform 3D renderer between PS1, Windows and Linux.</li>
+			<li>💾Model loading, texture loading, and vertex colors.</li>
+			<li>💾Custom binary file formats for 3D models and texture collection, documented on the GitHub page.</li>
+			<li>🎮Basic first person player character controller</li>
+			<li>📐My own collision detection code, including a BVH acceleration structure to optimize the collision detection.</li>
+			<li>⏱️30+ FPS on PS1, mostly bottlenecked by the graphics pipeline.</li>
+			<li>🖌️The intro to Sub Nivis's first level modeled by hand to fit the PS1 hardware.</li>
+		</ul>
+	</p>
+	<p>
+		Optimizing performance is a big part of this project, since the Playstation 1 is relatively slow console by today's standards. Given the limited floating-point capabilities of the console, I decided to use fixed-point numbers for all my calculations.
+		The video below shows how the current build runs on the console. 
+	</p>
+</div>
+<!--NEAT IMAGES-->
+<div class="image_single">
+	<div class="image_grid_entry">
+		<video controls autoplay loop muted height="100%" poster="/assets/shooterpsx/shooterpsx.png">
+			<source src="/assets/shooterpsx/shooterpsx.webm" type="video/webm" />
+			<img src="/assets/shooterpsx/shooterpsx.png" />
+		</video>
+	</div>
+</div>
+<!--LINKS-->
+<div class="content_title">
+	<hr />
+	<p>Links</p>
+</div>
+<div class="content">
+	<div class="content_socials">
+		<p>
+			<br /><a href="https://github.com/FlannyH/ShooterPSX"> <img src="/assets/logo_github.svg" class="inline_image">View on GitHub</a>
+		</p>
+	</div>
+</div>

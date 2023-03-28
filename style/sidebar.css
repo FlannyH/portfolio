@@ -29,6 +29,7 @@
 	padding: 0.1em;
 	transition-duration: 250ms;
 	display: block;
+    text-decoration: none;
 }
 
 a:hover {
