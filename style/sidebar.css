@@ -2,6 +2,9 @@
 	font-family: Connection;
 	src: url(/style/fonts/connection.otf);
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
 .nav_bar {
     position: fixed;
