@@ -30,7 +30,7 @@ $(document).ready(function () {
 	const url_params = new URLSearchParams(window.location.search);
 	page_source = url_params.get("page");
 	if (page_source == null) {
-		page_source = "/parts/home.html";
+		page_source = "./parts/home.html";
 	}
 	$("#content").load(page_source);
 });
