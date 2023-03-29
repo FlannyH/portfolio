@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Connection;
-	src: url(./style/fonts/connection.otf);
+	src: url(./fonts/connection.otf);
 }
 ::-webkit-scrollbar {
     display: none;
