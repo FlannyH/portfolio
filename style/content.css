@@ -201,3 +201,9 @@ body {
 		font-size: 100%;
 	}
 }
+
+@media screen and (orientation:landscape) {
+	.hide_when_mobile {
+		display: none;
+	}
+}
