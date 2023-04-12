@@ -21,6 +21,12 @@ body {
 	font-size: 2em;
 }
 
+.content_subtitle {
+	text-align: center;
+	line-height: 0;
+	font-size: 1em;
+}
+
 .content_socials a {
 	width: 100%;
 	text-decoration: none;
@@ -177,6 +183,12 @@ body {
 		grid-auto-rows: 53.333vw;
 	}
 	.content_title p {
+		font-size: 2em;
+	}
+	
+	.content_subtitle {
+		text-align: center;
+		line-height: 0;
 		font-size: 2em;
 	}
 	.content p {
