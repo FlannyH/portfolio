@@ -1,0 +1,54 @@
+<div class="hide_when_mobile">
+	<div class="content">
+		<div class="content_socials">
+			<p><a href="?page=./projects/solo.html"><img src="./assets/return.svg" class="inline_image">Back to solo projects</a></p>
+		</div>
+	</div>
+</div>
+<!--TITLE-->
+<div class="content_title">
+	<p>Optimizing for Playstation 1</p>
+	<hr />
+</div>
+<!--INTRO-->
+<div class="content">
+	<p> 
+        For the past year, I've been learning how to program games for the Playstation 1 in my spare time, using PSn00bSDK, an open source homebrew SDK for the Playstation 1, using the C programming language.
+    </p>
+    <p>
+        This adventure started as a <a href="">silly tweet of a spinning low-poly rat with the Free Bird solo playing in the background</a>, but quickly got out of hand, and grew into an ambitious port of Sub Nivis, a game I worked on at Breda University of Applied Science.
+    </p>
+    <p>
+        As the project progressed, I ran into problems with the game's performance, because of how many polygons the game was rendering. So, to get the performance to at least 30 fps, I had to optimize the game. In this page I will explain what I've done to keep the performance of the game up to standard.
+    </p>
+</div>
+<hr/>
+<!--QUADS-->
+<div class="content">
+    <h2>Quads vs Triangles</h2>
+    <div class="image_grid">
+        <div class="image_grid_entry">
+            <img src="./assets/blog/2023/optimization_for_ps1/tri_quad_wireframe.png" />
+        </div>
+        <div class="image_grid_entry">
+            <img src="./assets/blog/2023/optimization_for_ps1/tri_quad_concept.png" />
+        </div>
+    </div>
+    <p>
+        For some added context: technically speaking, the Playstation 1's GPU only renders triangles. However, its GPU <i>does</i> have a render command packet for rendering quads, it just splits it into 2 triangles internally. Despite that, it's still beneficial to render quads whenever possible.
+    </p>
+	<p> 
+        Initially, the game only used triangles in the model data. This is the easiest way to implement 3D geometry, since modern graphics are all triangle-based anyway. Some formats, like glTF, don't even support other primitive types than triangles.
+    </p>
+    <p>
+        My model format does not use index buffers, as it created too much overhead for the rendering code. This means that a quad would be represented as two triangles, so every quad would require 6 vertices. If we add support for quads in the model format, we reduce the number of vertices needed for each quad to only 4. This saves 2 vertex transformations per quad, effectively removing up to a third of our vertex processing time. If we consider the fact that most 3D-modeling workflows are quad-based, this optimization has a significant impact on the game's performance.
+    </p>
+</div>
+<hr/>
+<!--QUADS-->
+<div class="content">
+    <h2>Frustrum Culling</h2>
+    // todo: add fancy screenshots of top down view of culling in the windows build
+    <p>
+    </p>
+</div>
