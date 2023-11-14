@@ -81,6 +81,13 @@
         With frustrum culling, we remove all the geometry that's off screen, but we still render all meshes that are on screen that would be occluded by other meshes. For example, if we're looking at a wall, and there's a level cluster that's behind the wall and not visible, we still process the mesh and draw all the triangles. What can we do about this?
     </p>
     <p>
-        The way I solved it in my project, is by using regions with visibility lists. 
+        Here's how I solved it in my project. First, we take the collision model, and we split it into regions, by constructing a Bounding Volume Hierarchy structure for the collision triangles. We have to make sure there aren't too many layers, and that the bounding boxes of the leaf nodes aren't too small, as we don't want too many regions. The max tree depth and minimum bounding box size are hand-picked. Then, for each leaf node, we create an empty 128-bits bitfield, where each bit corresponds to one level geometry cluster. If a bit is set, it means that cluster is visible from this region, and we should render it if the player is inside it. Additionally, the bounding boxes of the regions have a bit of padding, to make sure we don't have geometry popping in and out of existence before our eyes.
     </p>
+    <p>
+        How do we determine which level geometry clusters are visible from a given region? The solution might be a bit cursed, but we brute force it. We take all the polygons the player can stand on in this region, and add them to a render_positions array. Then, render a cubemap of the level for every position in that array, where the color that will be stored in the cubemap corresponds to the level geometry cluster index. Then, we check all the pixels in that cubemap, and for every mesh that's visible, set the bit in the bitfield to 1.
+    </p>
+    <p>
+        During gameplay, we figure out in which of these regions the player is standing. Then, when we render the level, we fetch the visibility list based on the region the player is in, and only render the level geometry clusters where the corresponding bit in the visibility list is set. As seen in the video below, this technique culls out a large number of level clusters, significantly reducing the number of polygons we have to process and render.
+    </p>
+    // todo: add video of wireframe view with geometry popping out of existence
 </div>
