@@ -59,15 +59,15 @@
         After this, the level geometry is saved as one model with each cluster as a submesh.
     </p>
 </div>
-<!--FRUSTRUM CULLING-->
+<!--FRUSTUM CULLING-->
 <div class="content">
-    <h2>Frustrum Culling</h2>
+    <h2>Frustum Culling</h2>
     // todo: add fancy screenshots of top down view of culling in the windows build
     <p>
         When we render the level, we also process all the geometry that's off screen. This means we're spending a lot of processing power on geometry that has no impact on the frame we end up seeing on screen. Now that we have the level split into small clusters, we can easily solve this. 
     </p>
     <p>
-        Frustrum culling is an optimization technique where we don't render any models that are outside the camera's view frustrum. To perform this test efficiently on the Playstation 1, I used some tricks. Each mesh has its own world-space axis aligned bounding box that encompasses all the mesh geometry. When drawing a mesh, we transform the 6 points of the bounding box to screen-space. Then, with those screens-space points, we create a screen-space axis aligned bounding box, and then check whether the bounding box is on screen or not. If for example, all vertices are to the left of the screen, it's off screen, so we can safely skip rendering it. 
+        Frustum culling is an optimization technique where we don't render any models that are outside the camera's view frustum. To perform this test efficiently on the Playstation 1, I used some tricks. Each mesh has its own world-space axis aligned bounding box that encompasses all the mesh geometry. When drawing a mesh, we transform the 6 points of the bounding box to screen-space. Then, with those screens-space points, we create a screen-space axis aligned bounding box, and then check whether the bounding box is on screen or not. If for example, all vertices are to the left of the screen, it's off screen, so we can safely skip rendering it. 
     </p>
     <p>
         Transforming the bounding box only takes 6 vertex transformations. If the mesh is off screen, this saves rendering those 100 polygons, which is between 300 and 400 vertices we no longer have to process, saving a huge amount of rendering time.
@@ -78,7 +78,7 @@
     <h2>Visibility Culling</h2>
     // todo: add fancy screenshots of top down view of culling in the windows build
     <p>
-        With frustrum culling, we remove all the geometry that's off screen, but we still render all meshes that are on screen that would be occluded by other meshes. For example, if we're looking at a wall, and there's a level cluster that's behind the wall and not visible, we still process the mesh and draw all the triangles. What can we do about this?
+        With frustrm culling, we remove all the geometry that's off screen, but we still render all meshes that are on screen that would be occluded by other meshes. For example, if we're looking at a wall, and there's a level cluster that's behind the wall and not visible, we still process the mesh and draw all the triangles. What can we do about this?
     </p>
     <p>
         Here's how I solved it in my project. First, we take the collision model, and we split it into regions, by constructing a Bounding Volume Hierarchy structure for the collision triangles. We have to make sure there aren't too many layers, and that the bounding boxes of the leaf nodes aren't too small, as we don't want too many regions. The max tree depth and minimum bounding box size are hand-picked. Then, for each leaf node, we create an empty 128-bits bitfield, where each bit corresponds to one level geometry cluster. If a bit is set, it means that cluster is visible from this region, and we should render it if the player is inside it. Additionally, the bounding boxes of the regions have a bit of padding, to make sure we don't have geometry popping in and out of existence before our eyes.
