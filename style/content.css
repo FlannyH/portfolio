@@ -238,6 +238,12 @@ body {
 }
 
 @media screen and (orientation:landscape) {
+	.hide_when_not_mobile {
+		display: none;
+	}
+}
+
+@media screen and (orientation:portrait) {
 	.hide_when_mobile {
 		display: none;
 	}
