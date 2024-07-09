@@ -57,6 +57,7 @@ a:hover {
 	width: 32px;
 	padding: 1%;
 	vertical-align: middle;
+	border-radius: 0 !important;
 }
 
 .besides_nav_bar {
