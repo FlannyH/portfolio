@@ -1,0 +1,72 @@
+<div class="hide_when_not_mobile">
+	<div class="content">
+		<div class="content_socials">
+			<p><a href="?page=./projects/solo.html"><img src="./assets/return.svg" class="inline_image">Back to solo projects</a></p>
+		</div>
+	</div>
+</div>
+<!--TITLE-->
+<div class="content_title">
+	<p>Raytracer - Physically Based Renderer project</p>
+</div>
+<div class="content_subtitle">
+	<p>Made using C++ and DirectX 12</p>
+	<p>Platforms: Windows</p>
+	<p>Solo Project</p>
+	<p>2025</p>
+	<hr />
+</div>
+<!--NEAT IMAGES-->
+<div class="image_single">
+	<div class="image_grid_entry">
+		<img src="./assets/renderer_new/abeautifulgame.webp" alt="Screenshot of path-traced chessboard model"/>
+	</div>
+</div>
+<div class="content_title">
+	<p>Description</p>
+</div>
+<!--SUMMARY-->
+<div class="content">
+	<p>
+		Building on what I learned when making my old OpenGL renderer, combined with what I learned at university and at my internship, I started working on a renderer using DirectX 12.
+	</p>
+	<p>
+		Using DirectX 12 over OpenGL means I have lower level access to the GPU, and allows me to use modern features like hardware accelerated ray tracing (RTX). I chose DirectX 12 over Vulkan, because I learned more about DirectX 12 than Vulkan at this point.
+	</p>
+	<p>
+		The goal of this project is to build a real-time renderer (60 FPS), which looks as close to the reference pathtracer as my GPU will let me. I'm currently running an RTX 3060 12 GB, but it would be amazing if the real-time renderer also runs at interactive frame rates on low end hardware like the GTX 1050, perhaps using a lower quality setting.
+	</p>
+	<p>
+		You can switch between the pathtracer renderer and the real-time using the number keys, where 1 is the work-in-progress real-time renderer, and 2 is the reference pathtracer.
+	</p>
+	<p>
+		This project is currently in development. Here is where the project is at right now:
+		<ul>
+			<li>🔦 Physically based path tracer with temporal accumulation</li>
+			<li>💡 Implements the same BRDF as common rendering engines like Unreal Engine and Blender</li>
+			<li>🖼️ Supports glTF scene loading with correct transforms</li>
+			<li>🎥 Fly around the scene with the debug camera</li>
+			<li>🛠️ Flexible DirectX 12 render backend, with a Vulkan render backend coming soon</li>
+			<li>⚡ Work in progress real-time renderer, using image-based lighting for specular lighting, and spherical harmonics for diffuse lighting</li>
+			<li>🎨 ACES tonemapping</li>
+		</ul>
+	</p>
+</div>
+<!--NEAT IMAGES-->
+<div class="image_single">
+	<div class="image_grid_entry">
+		<img src="./assets/renderer_new/balls.webp" alt="Screenshot of path-traced scene with spheres of varying levels of roughness and metalness"/>
+	</div>
+</div>
+<!--LINKS-->
+<div class="content_title">
+	<hr />
+	<p>Links</p>
+</div>
+<div class="content">
+	<div class="content_socials">
+		<p>
+			<br /><a href="https://github.com/FlannyH/raytracer"> <img src="./assets/logo_github.svg" class="inline_image">View on GitHub</a>
+		</p>
+	</div>
+</div>
